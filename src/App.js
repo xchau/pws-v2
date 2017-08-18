@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import './styles/App.css';
 
+import { Link } from 'react-router-dom'
+
 import Layout from 'antd/lib/layout';
 import Menu from 'antd/lib/menu';
 import Icon from 'antd/lib/icon';
 
 import { CustomHeader } from './components/CustomHeader';
+import { CustomContent } from './components/CustomContent';
 
 const { Content, Footer, Sider } = Layout;
 const MenuItem = Menu.Item;
 
-// import { SideMenu } from './components/SideMenu';
 
 class App extends Component {
   constructor(props) {
@@ -22,37 +24,11 @@ class App extends Component {
       windowWidth: null
     };
 
-    this.toggleCollapsed = this.toggleCollapsed.bind(this);
-    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    this.scrollTo = this.scrollTo.bind(this);
   }
 
-  toggleCollapsed() {
-
-    this.setState({
-      menuCollapsed: !this.state.menuCollapsed
-    }, () => {console.log(this.state.menuCollapsed);});
-  }
-
-  updateWindowDimensions() {
-    this.setState({
-      windowHeight: window.innerHeight,
-      windowWidth: window.innerWidth
-    });
-  }
-
-  componentDidMount() {
-    this.updateWindowDimensions();
-    window.addEventListener(
-      'resize',
-      this.updateWindowDimensions
-    );
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener(
-      'resize',
-      this.updateWindowDimensions
-    );
+  scrollTo(id) {
+    document.getElementById(id).scrollIntoView();
   }
 
   render() {
@@ -97,29 +73,13 @@ class App extends Component {
               </MenuItem>
               <MenuItem key="8">
                 <Icon type="shop" />
-                <span className="nav-text">nav 8</span>
+                <span onClick={() => this.scrollTo('next')} className="nav-text">nav 8</span>
               </MenuItem>
             </Menu>
           </Sider>
           <Layout className="app-content-layout">
             <CustomHeader />
-            <Content className="app-content-container">
-              <div style={{ padding: 24, background: '#fff', textAlign: 'center' }}>
-                ...
-                <br />
-                Really
-                <br />...<br />...<br />...<br />
-                long
-                <br />...<br />...<br />...<br />...<br />...<br />...
-                <br />...<br />...<br />...<br />...<br />...<br />...
-                <br />...<br />...<br />...<br />...<br />...<br />...
-                <br />...<br />...<br />...<br />...<br />...<br />...
-                <br />...<br />...<br />...<br />...<br />...<br />...
-                <br />...<br />...<br />...<br />...<br />...<br />...
-                <br />...<br />...<br />...<br />...<br />...<br />
-                content
-              </div>
-            </Content>
+            <CustomContent />
             <Footer style={{ textAlign: 'center' }}>
               Ant Design ©2016 Created by Ant UED
             </Footer>
