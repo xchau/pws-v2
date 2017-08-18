@@ -11,9 +11,9 @@ const MenuItem = Menu.Item;
 
 export const SideMenu = (props) => {
   return (
-    <Row>
-      <Col xs={1} sm={3} md={4}></Col>
-      <Col xs={22} sm={18} md={16}>
+    // <Row>
+    //   <Col xs={1} sm={3} md={4}></Col>
+    //   <Col xs={22} sm={18} md={16}>
         <div style={{ width: 240 }}>
           <Button type="primary" onClick={props.toggleCollapsed} style={{ marginBottom: 16 }}>
             <Icon type={props.menuCollapsed ? 'menu-unfold' : 'menu-fold'} />
@@ -21,9 +21,10 @@ export const SideMenu = (props) => {
           <Menu
             defaultSelectedKeys={['1']}
             defaultOpenKeys={['sub1']}
-            mode="inline"
-            theme="dark"
             inlineCollapsed={props.menuCollapsed}
+            mode="inline"
+            style={{width: '160px'}}
+            theme="light"
           >
             <MenuItem key="1">
               <Icon type="pie-chart" />
@@ -53,8 +54,8 @@ export const SideMenu = (props) => {
             </SubMenu>
           </Menu>
         </div>
-      </Col>
-      <Col xs={1} sm={3} md={4}></Col>
-    </Row>
+    //   </Col>
+    //   <Col xs={1} sm={3} md={4}></Col>
+    // </Row>
   );
 };
