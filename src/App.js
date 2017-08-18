@@ -1,19 +1,28 @@
 import React, { Component } from 'react';
 import './styles/App.css';
 
-import Button from 'antd/lib/button';
 import { Header } from './components/Header';
+import { SideMenu } from './components/SideMenu';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      menuCollapsed: false,
       windowHeight: null,
       windowWidth: null
     };
 
+    this.toggleCollapsed = this.toggleCollapsed.bind(this);
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  toggleCollapsed() {
+
+    this.setState({
+      menuCollapsed: !this.state.menuCollapsed
+    }, () => {console.log(this.state.menuCollapsed);});
   }
 
   updateWindowDimensions() {
@@ -44,7 +53,10 @@ class App extends Component {
         <Header
           windowWidth={this.state.windowWidth}
         />
-        <Button type="primary">Primary</Button>
+        <SideMenu
+          menuCollapsed={this.state.menuCollapsed}
+          toggleCollapsed={this.toggleCollapsed}
+        />
       </div>
     );
   }

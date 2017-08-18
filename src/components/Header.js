@@ -5,7 +5,6 @@ import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
 
 export const Header = (props) => {
-  console.log(props);
   return (
     <Row>
       <Col xs={1} sm={3} md={4}></Col>
