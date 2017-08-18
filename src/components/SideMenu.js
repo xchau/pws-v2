@@ -8,6 +8,7 @@ import Col from 'antd/lib/col';
 
 const SubMenu = Menu.SubMenu;
 const MenuItem = Menu.Item;
+const MenuDivider = Menu.Divider;
 
 export const SideMenu = (props) => {
   return (
@@ -23,13 +24,14 @@ export const SideMenu = (props) => {
             defaultOpenKeys={['sub1']}
             inlineCollapsed={props.menuCollapsed}
             mode="inline"
-            style={{width: '160px'}}
+            style={{height: '100%', width: '180px'}}
             theme="light"
           >
             <MenuItem key="1">
               <Icon type="pie-chart" />
               <span>Option 1</span>
             </MenuItem>
+            <MenuDivider />
             <MenuItem key="2">
               <Icon type="desktop" />
               <span>Option 2</span>
