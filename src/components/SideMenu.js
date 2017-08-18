@@ -3,8 +3,10 @@ import React from 'react';
 import Menu from 'antd/lib/menu';
 import Icon from 'antd/lib/icon';
 import Button from 'antd/lib/button';
-import Row from 'antd/lib/row';
+import Layout from 'antd/lib/layout';
 import Col from 'antd/lib/col';
+
+const { Header, Content, Footer, Sider } = Layout;
 
 const SubMenu = Menu.SubMenu;
 const MenuItem = Menu.Item;
@@ -12,52 +14,60 @@ const MenuDivider = Menu.Divider;
 
 export const SideMenu = (props) => {
   return (
-    // <Row>
-    //   <Col xs={1} sm={3} md={4}></Col>
-    //   <Col xs={22} sm={18} md={16}>
-        <div style={{ width: 240 }}>
-          <Button type="primary" onClick={props.toggleCollapsed} style={{ marginBottom: 16 }}>
-            <Icon type={props.menuCollapsed ? 'menu-unfold' : 'menu-fold'} />
-          </Button>
-          <Menu
-            defaultSelectedKeys={['1']}
-            defaultOpenKeys={['sub1']}
-            inlineCollapsed={props.menuCollapsed}
-            mode="inline"
-            style={{height: '100%', width: '180px'}}
-            theme="light"
-          >
-            <MenuItem key="1">
+    <Layout>
+        <Sider
+          collapsible
+          trigger={null}
+          collapsed={props.menuCollapsed}
+          // style={{ backgroundColor: '#ccc' }}
+          onCollapse={props.toggleCollapsed}
+        >
+          <div className="logo" />
+          <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
+            <Menu.Item key="1">
               <Icon type="pie-chart" />
               <span>Option 1</span>
-            </MenuItem>
-            <MenuDivider />
-            <MenuItem key="2">
+            </Menu.Item>
+            <Menu.Item key="2">
               <Icon type="desktop" />
               <span>Option 2</span>
-            </MenuItem>
-            <MenuItem key="3">
-              <Icon type="inbox" />
-              <span>Option 3</span>
-            </MenuItem>
-            <SubMenu key="sub1" title={<span><Icon type="mail" /><span>Navigation One</span></span>}>
-              <MenuItem key="5">Option 5</MenuItem>
-              <MenuItem key="6">Option 6</MenuItem>
-              <MenuItem key="7">Option 7</MenuItem>
-              <MenuItem key="8">Option 8</MenuItem>
+            </Menu.Item>
+            <SubMenu
+              key="sub1"
+              title={<span><Icon type="user" /><span>User</span></span>}
+            >
+              <Menu.Item key="3">Tom</Menu.Item>
+              <Menu.Item key="4">Bill</Menu.Item>
+              <Menu.Item key="5">Alex</Menu.Item>
             </SubMenu>
-            <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>Navigation Two</span></span>}>
-              <MenuItem key="9">Option 9</MenuItem>
-              <MenuItem key="10">Option 10</MenuItem>
-              <SubMenu key="sub3" title="Submenu">
-                <MenuItem key="11">Option 11</MenuItem>
-                <MenuItem key="12">Option 12</MenuItem>
-              </SubMenu>
+            <SubMenu
+              key="sub2"
+              title={<span><Icon type="team" /><span>Team</span></span>}
+            >
+              <Menu.Item key="6">Team 1</Menu.Item>
+              <Menu.Item key="8">Team 2</Menu.Item>
             </SubMenu>
+            <Menu.Item key="9">
+              <Icon type="file" />
+              <span>File</span>
+            </Menu.Item>
           </Menu>
-        </div>
-    //   </Col>
-    //   <Col xs={1} sm={3} md={4}></Col>
-    // </Row>
+        </Sider>
+        {/* <Layout>
+          <Header style={{ background: '#fff', padding: 0 }} />
+          <Content style={{ margin: '0 16px' }}>
+            <Breadcrumb style={{ margin: '12px 0' }}>
+              <Breadcrumb.Item>User</Breadcrumb.Item>
+              <Breadcrumb.Item>Bill</Breadcrumb.Item>
+            </Breadcrumb>
+            <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
+              Bill is a cat.
+            </div>
+          </Content>
+          <Footer style={{ textAlign: 'center' }}>
+            Ant Design ©2016 Created by Ant UED
+          </Footer>
+        </Layout> */}
+      </Layout>
   );
 };

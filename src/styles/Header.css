@@ -1,9 +1,28 @@
-.header-box {
-  display: flex;
-  justify-content: center;
+.header-container {
+  padding: 0;
+  width: 100% !important;
 }
 
-.header-namebox {
+.header-box {
+  background-color: #ccc;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+
+  /* shadows */
+  box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.12), 0 0 1px 1px rgba(0, 0, 0, 0.24);
+}
+
+.header-name {
+  font-size: 2rem;
+  margin-left: 20px;
+}
+
+.header-title {
+  margin-left: 10px;
+}
+
+/*.header-namebox {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -27,4 +46,4 @@
 
 .header-alt-title {
   font-size: 1.4rem !important;
-}
+}*/
