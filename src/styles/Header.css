@@ -1,0 +1,29 @@
+.header-box {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header-namebox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 10px;
+  width: 75%;
+}
+
+.header-namebox span {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.header-namebox b {
+  font-family: RalewayLight;
+  font-weight: 400;
+  font-size: 50%;
+  margin-left: 3px;
+}
+
+.header-alt-title {
+  font-size: 1.4rem !important;
+}

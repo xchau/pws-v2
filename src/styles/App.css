@@ -1,3 +1,31 @@
-.app-col {
-  background-color: lightgreen;
+@import '~antd/dist/antd.css';
+
+@font-face {
+  font-family: "OpenSansLight";
+  src: url('../assets/fonts/OpenSans-Light.ttf');
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url('../assets/fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: "RalewayLight";
+  src: url('../assets/fonts/Raleway-Regular.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  font-family: OpenSansLight !important;
+  font-size: 1rem;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+.app-container {
+  background-color: #f2f2f2;
+  min-height: 100% ;
 }
