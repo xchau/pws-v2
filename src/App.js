@@ -1,14 +1,33 @@
 import React, { Component } from 'react';
 import './styles/App.css';
 
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
 import smoothScroll from 'smoothscroll';
 import Layout from 'antd/lib/layout';
 
 import { SideMenu } from './components/SideMenu.js';
 import { CustomHeader } from './components/CustomHeader';
+import { CustomContent } from './components/CustomContent';
 import { CustomFooter } from './components/CustomFooter';
 
+import { Test } from './components/Test';
+
 const { Content } = Layout;
+const routes = [
+  {
+    path: '/',
+    exact: true,
+    comp: CustomContent
+  },
+  {
+    path: '/test',
+    comp: Test
+  }
+];
 
 class App extends Component {
   constructor(props) {
@@ -29,18 +48,31 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app-container">
-        <Layout>
-          <SideMenu scrollTo={this.scrollTo} />
-          <Layout className="app-content-layout">
-            <CustomHeader />
-            <Content>
-              { this.props.children }
-            </Content>
-            <CustomFooter />
+      <Router>
+        <div className="app-container">
+          <Layout>
+            <SideMenu scrollTo={this.scrollTo} />
+            <Layout className="app-content-layout">
+              <CustomHeader />
+              <Content>
+                <Switch>
+                  {
+                    routes.map((route, idx) => (
+                      <Route
+                        key={idx}
+                        exact={route.exact}
+                        path={route.path}
+                        component={route.comp}
+                      />
+                    ))
+                  }
+                </Switch>
+              </Content>
+              <CustomFooter />
+            </Layout>
           </Layout>
-        </Layout>
-      </div>
+        </div>
+      </Router>
     );
   }
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Header.css';
 
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import Layout from 'antd/lib/layout';
 
@@ -11,12 +11,12 @@ export const CustomHeader = (props) => {
   return (
     <Header className="header-container">
       <div className="header-box">
-        <Link to="/">
+        {/* <Link to="/"> */}
           <span id="top" className="header-name">
             Minh Nhat Chau
             <span className="header-title">Web Developer</span>
           </span>
-        </Link>
+        {/* </Link> */}
       </div>
     </Header>
   );
