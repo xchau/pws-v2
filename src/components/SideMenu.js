@@ -7,8 +7,6 @@ import Layout from 'antd/lib/layout';
 import Menu from 'antd/lib/menu';
 import Icon from 'antd/lib/icon';
 
-import { Project } from './Project';
-
 const { Sider } = Layout;
 const SubMenu = Menu.SubMenu;
 const MenuItem = Menu.Item;
@@ -33,7 +31,7 @@ export const SideMenu = (props) => {
           title={projects}
         >
           <MenuItem key="1">
-            <Link to="/projects/test" component={Project}>
+            <Link to="/test">
               <Icon type="user" />
               Project 1
             </Link>
