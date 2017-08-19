@@ -30,7 +30,7 @@ export const SideMenu = (props) => {
         >
           <MenuItem key="1">
             <Icon type="user" />
-            <span className="nav-text">nav 1</span>
+            nav 1
           </MenuItem>
           <MenuItem key="2">
             <Icon type="video-camera" />

@@ -23,11 +23,15 @@ export const CustomContent = (props) => {
         <br />...<br />...<br />...<br />...<br />...<br />...
         <br />...<br />...<br />...<br />...<br id="next" />...<br />
         content
-        <Icon
-          className="content-top-icon"
+        <div
+          className="content-top-box"
           onClick={() => props.scrollTo('top')}
-          type="caret-up"
-        />
+        >
+          <Icon
+            className="content-top-icon"
+            type="up"
+          />
+        </div>
       </div>
     </Content>
   );

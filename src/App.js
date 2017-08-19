@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './styles/App.css';
 
+import smoothScroll from 'smoothscroll';
+
 import Layout from 'antd/lib/layout';
 import Menu from 'antd/lib/menu';
 
@@ -26,9 +28,7 @@ class App extends Component {
   }
 
   scrollTo(id) {
-    document.getElementById(id).scrollIntoView({
-      behavior: 'smooth'
-    });
+    smoothScroll(document.getElementById(id));
   }
 
   render() {

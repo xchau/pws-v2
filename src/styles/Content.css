@@ -1,6 +1,8 @@
 .content-container {
+  align-items: center;
   background-color: #fff;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 30px 25px;
   padding: 24px;
@@ -10,8 +12,15 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
+.content-top-box {
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  min-height: 30px;
+  min-width: 60px;
+  margin-top: 30px;
+}
+
 .content-top-icon {
   font-size: 1.2rem;
-  position: absolute;
-  bottom: 0;
 }
