@@ -30,31 +30,6 @@ html, body, #root {
   min-height: 100% ;
 }
 
-.app-sider {
-  background-color: #fff !important;
-  height: 120%;
-  left: 0;
-  overflow: auto;
-  padding-top: 70px;
-  position: fixed;
-  width: 150px !important;
-
-  /* shadows */
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-
-/*.app-sider:hover {
-  box-shadow: 2px 0px 2px 3px rgba(0, 0, 0, 0.15), 3px 3px 3px 4px rgba(0, 0, 0, 0.10);
-}*/
-
-.app-sider ul {
-  border: 0;
-}
-
 .app-content-layout {
   margin-left: 150px;
-}
-
-.ant-menu-inline .ant-menu-item:after, .ant-menu-vertical .ant-menu-item:after {
-  border-right: 3px solid #f44f6d;
 }
