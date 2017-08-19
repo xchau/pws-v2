@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 
 import App from '../App';
 
-export default function wrapApp(Comp) {
+export const wrapApp = (Comp) => {
   class Wrapper extends Component {
+
     render() {
       return (
         <App>
@@ -14,4 +15,4 @@ export default function wrapApp(Comp) {
   }
 
   return Wrapper;
-}
+};

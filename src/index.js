@@ -7,8 +7,7 @@ import {
 } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 
-import AppWrapper from './components/AppWrapper';
-
+import { wrapApp } from './components/wrapApp';
 import { CustomContent } from './components/CustomContent';
 import { Test } from './components/Test';
 
@@ -17,11 +16,11 @@ ReactDOM.render(
     <Switch>
       <Route
         exact path="/"
-        component={AppWrapper(CustomContent)}
+        component={wrapApp(CustomContent)}
       />
       <Route
         path="/test"
-        component={AppWrapper(Test)}
+        component={wrapApp(Test)}
       />
     </Switch>
   </Router>,
