@@ -38,7 +38,8 @@ class App extends Component {
           <SideMenu scrollTo={this.scrollTo} />
           <Layout className="app-content-layout">
             <CustomHeader />
-            <CustomContent scrollTo={this.scrollTo} />
+            {this.props.children}
+            {/* <CustomContent scrollTo={this.scrollTo} /> */}
             <CustomFooter />
           </Layout>
         </Layout>
