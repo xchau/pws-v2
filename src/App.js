@@ -17,17 +17,6 @@ import { CustomFooter } from './components/CustomFooter';
 import { Test } from './components/Test';
 
 const { Content } = Layout;
-const routes = [
-  {
-    path: '/',
-    exact: true,
-    comp: CustomContent
-  },
-  {
-    path: '/test',
-    comp: Test
-  }
-];
 
 class App extends Component {
   constructor(props) {
@@ -35,15 +24,17 @@ class App extends Component {
 
     this.state = {
       menuCollapsed: false,
-      windowHeight: null,
-      windowWidth: null
     };
 
     this.scrollTo = this.scrollTo.bind(this);
   }
 
   scrollTo(id) {
-    smoothScroll(document.getElementById(id));
+    const location = document.getElementById(id);
+
+    if (location) {
+      smoothScroll(location);
+    }
   }
 
   render() {
@@ -56,16 +47,20 @@ class App extends Component {
               <CustomHeader />
               <Content>
                 <Switch>
-                  {
-                    routes.map((route, idx) => (
-                      <Route
-                        key={idx}
-                        exact={route.exact}
-                        path={route.path}
-                        component={route.comp}
+                  <Route
+                    exact path="/"
+                    component={(props) => (
+                      <CustomContent {...props}
+                        scrollTo={this.scrollTo}
                       />
-                    ))
-                  }
+                    )}
+                  />
+                  <Route
+                    path="/test"
+                    component={(props) => (
+                      <Test {...props} />
+                    )}
+                  />
                 </Switch>
               </Content>
               <CustomFooter />
