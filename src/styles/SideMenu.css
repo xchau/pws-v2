@@ -5,22 +5,22 @@
   overflow: auto;
   padding-top: 70px;
   position: fixed;
-  width: 150px !important;
+  width: 200px !important;
 
   /* shadows */
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-/*.app-sider:hover {
-  box-shadow: 2px 0px 2px 3px rgba(0, 0, 0, 0.15), 3px 3px 3px 4px rgba(0, 0, 0, 0.10);
-}*/
-
 .sidemenu-sider ul {
   border: 0;
 }
 
+.ant-menu-item .anticon, .ant-menu-submenu-title .anticon {
+  margin-right: 12px;
+}
+
 .ant-menu-item > a {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .ant-menu-item:hover, .ant-menu-submenu-title:hover, .ant-menu-item a:hover {

@@ -7,7 +7,7 @@ export const CustomContent = (props) => {
   return (
     <div className="content-container">
       <div>
-        ...
+        {/* ...
         <br />
         Really
         <br />...<br />...<br />...<br />
@@ -19,7 +19,7 @@ export const CustomContent = (props) => {
         <br />...<br />...<br />...<br />...<br />...<br />...
         <br />...<br />...<br />...<br />...<br />...<br />...
         <br />...<br />...<br />...<br />...<br id="next" />...<br />
-        content
+        content */}
         <div
           className="content-top-box"
           onClick={() => props.scrollTo('top')}
