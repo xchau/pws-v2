@@ -32,39 +32,46 @@ export const SideMenu = (props) => {
         >
           <MenuItem key="1">
             <Link to="/test">
-              <Icon type="user" />
-              Project 1
+              Blip
             </Link>
           </MenuItem>
           <MenuItem key="2">
-            <Icon type="video-camera" />
-            Project 2
+            <Link to="/test">
+              this.city
+            </Link>
           </MenuItem>
           <MenuItem key="3">
-            <Icon type="upload" />
-            Project 3
+            <Link to="/test">
+              LENDit
+            </Link>
+          </MenuItem>
+          <MenuItem key="4">
+            <Link to="/test">
+              Miser
+            </Link>
+          </MenuItem>
+          <MenuItem key="5">
+            <Link to="/test">
+              ReactSnake
+            </Link>
+          </MenuItem>
+          <MenuItem key="6">
+            <Link to="/test">
+              Geofindr
+            </Link>
           </MenuItem>
         </SubMenu>
-
-        <MenuItem key="4">
-          <Icon type="bar-chart" />
-          <span className="nav-text">About</span>
-        </MenuItem>
-        <MenuItem key="5">
-          <Icon type="cloud-o" />
-          <span className="nav-text">nav 5</span>
-        </MenuItem>
-        <MenuItem key="6">
-          <Icon type="appstore-o" />
-          <span className="nav-text">nav 6</span>
-        </MenuItem>
         <MenuItem key="7">
-          <Icon type="team" />
-          <span className="nav-text">nav 7</span>
+          <Icon type="smile-o" />
+          <span className="nav-text">Thoughts</span>
         </MenuItem>
         <MenuItem key="8">
-          <Icon type="shop" />
-          <span onClick={() => props.scrollTo('next')} className="nav-text">nav 8</span>
+          <Icon type="user" />
+          <span className="nav-text">About</span>
+        </MenuItem>
+        <MenuItem key="9">
+          <Icon type="phone" />
+          <span onClick={() => props.scrollTo('next')} className="nav-text">Contact</span>
         </MenuItem>
       </Menu>
     </Sider>
