@@ -3,7 +3,7 @@ import '../styles/Post.css';
 
 // import { Link } from 'react-router-dom';
 //
-// import Icon from 'antd/lib/icon';
+import Icon from 'antd/lib/icon';
 
 export const Post = (props) => {
   return (

@@ -6,6 +6,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
+import axios from 'axios';
 import smoothScroll from 'smoothscroll';
 import Layout from 'antd/lib/layout';
 
@@ -23,7 +24,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      //
+      projects: []
     };
 
     this.scrollTo = this.scrollTo.bind(this);
@@ -35,6 +36,22 @@ class App extends Component {
     if (location) {
       smoothScroll(location);
     }
+  }
+
+  componentDidMount() {
+    axios({
+      method: 'get',
+      // url: 'https://xchau-pws.herokuapp.com/api/projects'
+      url: 'http://localhost:8000/api/projects'
+    })
+    .then((res) => {
+      this.setState({
+        projects: res.data
+      });
+    })
+    .catch((err) => {
+      console.error(err);
+    });
   }
 
   render() {
@@ -51,6 +68,7 @@ class App extends Component {
                     exact path="/"
                     component={(props) => (
                       <CustomContent {...props}
+                        projects={this.state.projects}
                         scrollTo={this.scrollTo}
                       />
                     )}
