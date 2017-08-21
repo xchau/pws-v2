@@ -70,8 +70,10 @@ export const SideMenu = (props) => {
           <span className="nav-text">About</span>
         </MenuItem>
         <MenuItem key="9">
-          <Icon type="phone" />
-          <span onClick={() => props.scrollTo('next')} className="nav-text">Contact</span>
+          <div onClick={() => props.scrollTo('miser')}>
+            <Icon type="phone" />
+            <span className="nav-text">Contact</span>
+          </div>
         </MenuItem>
       </Menu>
     </Sider>

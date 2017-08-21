@@ -6,9 +6,16 @@ import '../styles/Post.css';
 import Moment from 'moment';
 import Icon from 'antd/lib/icon';
 
+import { shortenString } from '../helpers/helpers';
+
+/**** ADD REACT HELMET ****/
+
 export const Post = (props) => {
   return (
-    <div className="post-container">
+    <div
+      className="post-container"
+      id={props.postId.toLowerCase()}
+    >
       <div className="post-heading-container">
         <span className="post-header">
           { props.heading }
@@ -18,7 +25,7 @@ export const Post = (props) => {
         </span>
       </div>
       <div className="post-content-container">
-        { props.children }
+        { shortenString(props.children) }
       </div>
     </div>
   );

@@ -10,11 +10,6 @@
   src: url('../assets/fonts/OpenSans-Regular.ttf');
 }
 
-@font-face {
-  font-family: "RalewayLight";
-  src: url('../assets/fonts/Raleway-Regular.ttf');
-}
-
 * {
   box-sizing: border-box;
   font-family: OpenSansLight !important;
