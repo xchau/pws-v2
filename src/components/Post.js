@@ -3,6 +3,7 @@ import '../styles/Post.css';
 
 // import { Link } from 'react-router-dom';
 //
+import Moment from 'moment';
 import Icon from 'antd/lib/icon';
 
 export const Post = (props) => {
@@ -13,7 +14,7 @@ export const Post = (props) => {
           { props.heading }
         </span>
         <span className="post-date">
-          { props.date }
+          Published { Moment(props.date).format('MMMM Do, YYYY') }
         </span>
       </div>
       <div className="post-content-container">

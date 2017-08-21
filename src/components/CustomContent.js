@@ -13,6 +13,7 @@ export const CustomContent = (props) => {
           props.projects.map((project, idx) =>
           <Post
             key={idx}
+            id={project.title}
             date={project.createdAt}
             heading={project.title}
             route="/"
