@@ -23,7 +23,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      menuCollapsed: false,
+      //
     };
 
     this.scrollTo = this.scrollTo.bind(this);

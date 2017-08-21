@@ -52,7 +52,7 @@ export const SideMenu = (props) => {
           </MenuItem>
           <MenuItem key="5">
             <Link to="/test">
-              ReactSnake
+              React Snake
             </Link>
           </MenuItem>
           <MenuItem key="6">

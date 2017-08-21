@@ -1,0 +1,30 @@
+.post-container {
+  align-items: center;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  width: 100%;
+}
+
+.post-heading-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.post-header, .post-date {
+  font-family: RalewayLight, OpenSansLight, sans-serif !important;
+}
+
+.post-header {
+  font-size: 1.3rem;
+}
+
+.post-content-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+}

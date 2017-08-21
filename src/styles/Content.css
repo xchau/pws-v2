@@ -33,3 +33,7 @@
 .content-top-icon {
   font-size: 1.2rem;
 }
+
+.content-top-icon:hover {
+  color: #f44f6d;
+}
