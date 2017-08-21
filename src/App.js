@@ -62,7 +62,7 @@ class App extends Component {
             <SideMenu scrollTo={this.scrollTo} />
             <Layout className="app-content-layout">
               <CustomHeader />
-              <Content>
+              <Content className="content-container">
                 <Switch>
                   <Route
                     exact path="/"

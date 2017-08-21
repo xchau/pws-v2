@@ -1,9 +1,12 @@
 .header-container {
   background-color: #fff;
-  padding: 0;
-  padding-top: 80px;
-  width: 100% !important;
+  padding: 20px 0;
+  /*padding-top: 80px;*/
+  width: 92% !important;
   z-index: 2;
+
+  /* shadows */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .ant-layout-header {
@@ -11,13 +14,10 @@
 }
 
 .header-box {
-  /*background-color: #fff;*/
+  background-color: #fff;
   display: flex;
   justify-content: center;
   padding: 0;
-
-  /* shadows */
-  /*box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);*/
 }
 
 .header-box > a {

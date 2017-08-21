@@ -7,8 +7,8 @@ import { Post } from './Post';
 
 export const CustomContent = (props) => {
   return (
-    <div className="content-container">
-      <div className="content-box">
+    <div className="content-box">
+      <div className="content-list">
         {
           props.projects.map((project, idx) =>
           <Post
