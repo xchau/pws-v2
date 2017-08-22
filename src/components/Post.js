@@ -1,25 +1,31 @@
 import React from 'react';
 import '../styles/Post.css';
 
-// import { Link } from 'react-router-dom';
-//
+import { Link } from 'react-router-dom';
+
 import Moment from 'moment';
 import Icon from 'antd/lib/icon';
-
-import { shortenString } from '../helpers/helpers';
 
 /**** ADD REACT HELMET ****/
 
 export const Post = (props) => {
+  const path = `/${props.postId}`;
+
   return (
     <div
       className="post-container"
-      id={props.heading.toLowerCase()}
+      id={props.postId}
     >
+      <div className="post-quick-view">
+        <Icon className="post-view-icon" type="eye-o" />
+      </div>
       <div className="post-heading-container">
-        <span className="post-header">
+        <Link
+          className="post-header"
+          to={path}
+        >
           { props.heading }
-        </span>
+        </Link>
         <span className="post-date">
           Published { Moment(props.date).format('MMMM Do, YYYY') }
         </span>

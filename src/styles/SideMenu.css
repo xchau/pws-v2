@@ -3,7 +3,7 @@
   height: 120%;
   left: 0;
   overflow: auto;
-  padding-top: 70px;
+  padding-top: 50px;
   position: fixed;
   width: 200px !important;
   z-index: 3;
@@ -25,13 +25,14 @@
 }
 
 .ant-menu-item:hover, .ant-menu-submenu-title:hover, .ant-menu-item a:hover {
-  color: #f44f6d;
+  /*color: #f44f6d;*/
+  color: #f5617c;
 }
 
 .ant-menu-inline .ant-menu-item:after, .ant-menu-vertical .ant-menu-item:after {
-  border-right: 3px solid #f44f6d;
+  border-right: 3px solid #f5617c;
 }
 
 .ant-menu-item-selected, .ant-menu-item-selected > a {
-  color: #f44f6d;
+  color: #f5617c;
 }

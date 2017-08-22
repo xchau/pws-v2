@@ -15,6 +15,7 @@ export const CustomContent = (props) => {
             key={idx}
             date={project.createdAt}
             heading={project.projectName}
+            postId={project.pathName}
             stack={project.stack}
             route="/"
           >

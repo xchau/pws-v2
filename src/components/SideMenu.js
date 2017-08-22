@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/SideMenu.css';
 
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import Layout from 'antd/lib/layout';
 import Menu from 'antd/lib/menu';
@@ -31,36 +31,34 @@ export const SideMenu = (props) => {
           title={projects}
         >
           <MenuItem key="1">
-            {/* <Link to="/test"> */}
+            <div onClick={() => props.scrollTo('react_snake')}>
+              React Snake
+            </div>
+          </MenuItem>
+          <MenuItem key="2">
             <div onClick={() => props.scrollTo('blip')}>
               Blip
             </div>
-            {/* </Link> */}
-          </MenuItem>
-          <MenuItem key="2">
-            <Link to="/test">
-              this.city
-            </Link>
           </MenuItem>
           <MenuItem key="3">
-            <Link to="/test">
-              LENDit
-            </Link>
+            <div onClick={() => props.scrollTo('this.city')}>
+              this.city
+            </div>
           </MenuItem>
           <MenuItem key="4">
-            <Link to="/test">
-              Miser
-            </Link>
+            <div onClick={() => props.scrollTo('geofindr')}>
+              Geofindr
+            </div>
           </MenuItem>
           <MenuItem key="5">
-            <Link to="/test">
-              React Snake
-            </Link>
+            <div onClick={() => props.scrollTo('lendit')}>
+              LENDit
+            </div>
           </MenuItem>
           <MenuItem key="6">
-            <Link to="/test">
-              Geofindr
-            </Link>
+            <div onClick={() => props.scrollTo('miser')}>
+              Miser
+            </div>
           </MenuItem>
         </SubMenu>
         <MenuItem key="7">

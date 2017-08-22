@@ -15,7 +15,8 @@ import { CustomHeader } from './components/CustomHeader';
 import { CustomContent } from './components/CustomContent';
 import { CustomFooter } from './components/CustomFooter';
 
-import { Test } from './components/Test';
+import { Test } from './components/projects/Test';
+import { NoMatch } from './components/projects/NoMatch';
 
 const { Content } = Layout;
 
@@ -79,6 +80,10 @@ class App extends Component {
                     component={(props) => (
                       <Test {...props} />
                     )}
+                  />
+                  <Route
+                    path="*"
+                    component={NoMatch}
                   />
                 </Switch>
               </Content>
