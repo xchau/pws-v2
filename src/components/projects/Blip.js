@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const NoMatch = (props) => {
+export const Test = (props) => {
   return (
     <div className="content-box">
-      404 Not Found
+      Blip
     </div>
   );
 };

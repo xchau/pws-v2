@@ -4,7 +4,7 @@ import '../styles/Post.css';
 import { Link } from 'react-router-dom';
 
 import Moment from 'moment';
-import Icon from 'antd/lib/icon';
+// import Icon from 'antd/lib/icon';
 
 /**** ADD REACT HELMET ****/
 
@@ -15,9 +15,9 @@ export const Post = (props) => {
       className="post-container"
       id={props.project.pathName}
     >
-      <div className="post-quick-view">
+      {/* <div className="post-quick-view">
         <Icon className="post-view-icon" type="eye-o" />
-      </div>
+      </div> */}
       <div className="post-heading-container">
         <Link
           className="post-header"

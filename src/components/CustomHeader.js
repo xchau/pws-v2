@@ -9,7 +9,7 @@ import Input from 'antd/lib/input';
 const { Header } = Layout;
 const Search = Input.Search;
 
-export const CustomHeader = (props, { listen }) => {
+export const CustomHeader = (props) => {
   return (
     <Header className="header-container">
       <div className="header-box">

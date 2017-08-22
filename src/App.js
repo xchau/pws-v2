@@ -10,14 +10,13 @@ import axios from 'axios';
 import smoothScroll from 'smoothscroll';
 import Layout from 'antd/lib/layout';
 
-import MainContent from './components/MainContent';
-import NoMatch from './components/projects/NoMatch';
-
-import { SideMenu } from './components/SideMenu.js';
 import { CustomHeader } from './components/CustomHeader';
+import { SideMenu } from './components/SideMenu';
+import { MainContent } from './components/MainContent';
 import { CustomFooter } from './components/CustomFooter';
-import { Test } from './components/projects/Test';
+import { NoMatch } from './components/projects/NoMatch';
 
+import {routes} from './components/routes/routes';
 
 const { Content } = Layout;
 
@@ -27,11 +26,9 @@ class App extends Component {
 
     this.state = {
       projects: [],
-      showSearch: true
     };
 
     this.scrollTo = this.scrollTo.bind(this);
-    this.toggleSearchBar = this.toggleSearchBar.bind(this);
   }
 
   scrollTo(id) {
@@ -40,13 +37,6 @@ class App extends Component {
     if (location) {
       smoothScroll(location);
     }
-  }
-
-  toggleSearchBar(bool) {
-    console.log('toggle');
-    this.setState({
-      showSearch: bool
-    });
   }
 
   componentDidMount() {
@@ -73,9 +63,24 @@ class App extends Component {
           <Layout>
             <SideMenu scrollTo={this.scrollTo} />
             <Layout className="app-content-layout">
-              <CustomHeader
-                showSearch={this.state.showSearch}
-              />
+              <Switch>
+                <Route
+                  exact path="/"
+                  component={(props) => (
+                    <CustomHeader
+                      showSearch={true}
+                    />
+                  )}
+                />
+                <Route
+                  path="*"
+                  component={(props) => (
+                    <CustomHeader
+                      showSearch={false}
+                    />
+                  )}
+                />
+              </Switch>
               <Content className="content-container">
                 <Switch>
                   <Route
@@ -89,12 +94,19 @@ class App extends Component {
                       />
                     )}
                   />
-                  <Route
-                    path="/test"
-                    component={(props) => (
-                      <Test {...props} />
-                    )}
-                  />
+
+                  {
+                    routes.map((route, idx) => <Route
+                      key={idx}
+                      path={route.path}
+                      component={(props) => (
+                        <route.comp {...props}
+
+                        />
+                      )}
+                    />)
+                  }
+
                   <Route
                     path="*"
                     component={(props) => (

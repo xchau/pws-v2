@@ -24,6 +24,7 @@
 
 .header-box > a {
   line-height: 1.5;
+  text-decoration: none !important;
 }
 
 .header-box span {
@@ -34,7 +35,6 @@
   color: rgba(0, 0, 0, 0.6);
   font-size: 2rem;
   margin-bottom: 10px;
-  text-decoration: none;
 }
 
 .header-title {
