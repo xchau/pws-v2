@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 25px;
+  width: 100%;
 }
 
 .footer-info-box, .footer-contact-box {
@@ -15,18 +16,13 @@
 .footer-contact-box {
   justify-content: space-around;
   margin-top: 8px;
-  min-width: 100px;
-  width: 22%;
+  /*min-width: 100px;*/
+  width: 25%;
 }
 
 .footer-logo {
-  height: 20px;
-  width: 20px;
-}
-
-.footer-email {
-  height: 19px;
-  width: 21px;
+  height: 22px;
+  width: 22px;
 }
 
 .footer-linkedin {

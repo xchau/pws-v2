@@ -31,9 +31,11 @@ export const SideMenu = (props) => {
           title={projects}
         >
           <MenuItem key="1">
-            <Link to="/test">
+            {/* <Link to="/test"> */}
+            <div onClick={() => props.scrollTo('blip')}>
               Blip
-            </Link>
+            </div>
+            {/* </Link> */}
           </MenuItem>
           <MenuItem key="2">
             <Link to="/test">

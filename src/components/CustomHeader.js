@@ -20,9 +20,9 @@ export const CustomHeader = (props) => {
           </span>
           {/* <span className="header-title">Web Developer</span> */}
           <Search
-            placeholder="input search text"
-            style={{ width: '20%' }}
+            className="header-search-bar"
             onSearch={value => console.log(value)}
+            placeholder="input search text"
           />
         </div>
       </Link>

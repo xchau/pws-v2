@@ -14,7 +14,7 @@ export const Post = (props) => {
   return (
     <div
       className="post-container"
-      id={props.postId.toLowerCase()}
+      id={props.heading.toLowerCase()}
     >
       <div className="post-heading-container">
         <span className="post-header">
@@ -23,9 +23,12 @@ export const Post = (props) => {
         <span className="post-date">
           Published { Moment(props.date).format('MMMM Do, YYYY') }
         </span>
+        <span className="post-stack">
+          { props.stack }
+        </span>
       </div>
       <div className="post-content-container">
-        { shortenString(props.children) }
+        { props.children }
       </div>
     </div>
   );

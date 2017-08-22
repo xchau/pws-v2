@@ -13,12 +13,12 @@ export const CustomContent = (props) => {
           props.projects.map((project, idx) =>
           <Post
             key={idx}
-            postId={project.title}
             date={project.createdAt}
-            heading={project.title}
+            heading={project.projectName}
+            stack={project.stack}
             route="/"
           >
-            {project.description}
+            {project.blurb}
           </Post>)
         }
       </div>

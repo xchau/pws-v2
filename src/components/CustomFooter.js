@@ -9,7 +9,7 @@ import linkedin from '../assets/img/linkedin-logo.gif';
 const { Footer } = Layout;
 const logoStyle = {
   color: '#303030',
-  fontSize: '20px'
+  fontSize: '22px'
 };
 
 export const CustomFooter = (props) => {
