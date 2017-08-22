@@ -25,7 +25,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      projects: []
+      projects: [],
+      showSearch: true
     };
 
     this.scrollTo = this.scrollTo.bind(this);
@@ -37,6 +38,13 @@ class App extends Component {
     if (location) {
       smoothScroll(location);
     }
+  }
+
+  toggleSearchBar() {
+
+    // this.setState({
+    //   showSearch: !this.state.showSearch
+    // });
   }
 
   componentDidMount() {
@@ -63,7 +71,9 @@ class App extends Component {
           <Layout>
             <SideMenu scrollTo={this.scrollTo} />
             <Layout className="app-content-layout">
-              <CustomHeader />
+              <CustomHeader
+                showSearch={this.state.showSearch}
+              />
               <Content className="content-container">
                 <Switch>
                   <Route

@@ -9,7 +9,7 @@ import Input from 'antd/lib/input';
 const { Header } = Layout;
 const Search = Input.Search;
 
-export const CustomHeader = (props) => {
+export const CustomHeader = (props, { listen }) => {
   return (
     <Header className="header-container">
       <Link to="/">
@@ -18,12 +18,13 @@ export const CustomHeader = (props) => {
             Minh Nhat Chau
             <span className="header-title">Web Developer</span>
           </span>
-          {/* <span className="header-title">Web Developer</span> */}
-          <Search
-            className="header-search-bar"
-            onSearch={value => console.log(value)}
-            placeholder="input search text"
-          />
+          {
+            props.showSearch ? <Search
+              className="header-search-bar"
+              onSearch={value => console.log(value)}
+              placeholder="input search text"
+            /> : null
+          }
         </div>
       </Link>
     </Header>
