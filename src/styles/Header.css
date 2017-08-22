@@ -22,11 +22,16 @@
   color: rgba(0, 0, 0, 0.8);
 }
 
+.header-box > a {
+  line-height: 1.5;
+}
+
 .header-box span {
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 .header-name {
+  color: rgba(0, 0, 0, 0.6);
   font-size: 2rem;
   margin-bottom: 10px;
   text-decoration: none;
@@ -37,6 +42,6 @@
 }
 
 .header-search-bar {
-  margin: 10px 0;
+  margin: 20px 0 5px 0;
   width: 24%;
 }

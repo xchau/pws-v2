@@ -12,21 +12,21 @@ const Search = Input.Search;
 export const CustomHeader = (props, { listen }) => {
   return (
     <Header className="header-container">
-      <Link to="/">
-        <div className="header-box">
+      <div className="header-box">
+        <Link to="/">
           <span id="top" className="header-name">
             Minh Nhat Chau
             <span className="header-title">Web Developer</span>
           </span>
-          {
-            props.showSearch ? <Search
-              className="header-search-bar"
-              onSearch={value => console.log(value)}
-              placeholder="input search text"
-            /> : null
-          }
-        </div>
-      </Link>
+        </Link>
+        {
+          props.showSearch ? <Search
+            className="header-search-bar"
+            onSearch={value => console.log(value)}
+            placeholder="input search text"
+          /> : null
+        }
+      </div>
     </Header>
   );
 };

@@ -9,12 +9,11 @@ import Icon from 'antd/lib/icon';
 /**** ADD REACT HELMET ****/
 
 export const Post = (props) => {
-  const path = `/${props.postId}`;
-
+  const path = `/${props.project.pathName}`;
   return (
     <div
       className="post-container"
-      id={props.postId}
+      id={props.project.pathName}
     >
       <div className="post-quick-view">
         <Icon className="post-view-icon" type="eye-o" />
@@ -24,13 +23,13 @@ export const Post = (props) => {
           className="post-header"
           to={path}
         >
-          { props.heading }
+          { props.project.heading }
         </Link>
         <span className="post-date">
-          Published { Moment(props.date).format('MMMM Do, YYYY') }
+          Published { Moment(props.project.createdAt).format('MMMM Do, YYYY') }
         </span>
         <span className="post-stack">
-          { props.stack }
+          { props.project.stack }
         </span>
       </div>
       <div className="post-content-container">

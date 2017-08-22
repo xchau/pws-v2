@@ -10,13 +10,14 @@ import axios from 'axios';
 import smoothScroll from 'smoothscroll';
 import Layout from 'antd/lib/layout';
 
+import MainContent from './components/MainContent';
+import NoMatch from './components/projects/NoMatch';
+
 import { SideMenu } from './components/SideMenu.js';
 import { CustomHeader } from './components/CustomHeader';
-import { CustomContent } from './components/CustomContent';
 import { CustomFooter } from './components/CustomFooter';
-
 import { Test } from './components/projects/Test';
-import { NoMatch } from './components/projects/NoMatch';
+
 
 const { Content } = Layout;
 
@@ -30,6 +31,7 @@ class App extends Component {
     };
 
     this.scrollTo = this.scrollTo.bind(this);
+    this.toggleSearchBar = this.toggleSearchBar.bind(this);
   }
 
   scrollTo(id) {
@@ -40,11 +42,11 @@ class App extends Component {
     }
   }
 
-  toggleSearchBar() {
-
-    // this.setState({
-    //   showSearch: !this.state.showSearch
-    // });
+  toggleSearchBar(bool) {
+    console.log('toggle');
+    this.setState({
+      showSearch: bool
+    });
   }
 
   componentDidMount() {
@@ -79,9 +81,11 @@ class App extends Component {
                   <Route
                     exact path="/"
                     component={(props) => (
-                      <CustomContent {...props}
+                      <MainContent {...props}
                         projects={this.state.projects}
                         scrollTo={this.scrollTo}
+                        showSearch={this.state.showSearch}
+                        toggleSearchBar={this.toggleSearchBar}
                       />
                     )}
                   />
@@ -93,7 +97,12 @@ class App extends Component {
                   />
                   <Route
                     path="*"
-                    component={NoMatch}
+                    component={(props) => (
+                      <NoMatch {...props}
+                        showSearch={this.state.showSearch}
+                        toggleSearchBar={this.toggleSearchBar}
+                      />
+                    )}
                   />
                 </Switch>
               </Content>
