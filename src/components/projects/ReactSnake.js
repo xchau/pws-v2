@@ -3,12 +3,12 @@ import '../../styles/Project.css';
 
 import Icon from 'antd/lib/icon';
 
-export const Blip = (props) => {
+export const ReactSnake = (props) => {
   return (
     <div className="content-box">
       <section className="project-tldr project-section">
-        <h1>Blip</h1>
-        <p>Blip serves as a recipe book for travel, where users may share their experiences abroad or follow in another’s footsteps to adopt their experiences. Interactions with the app are streamlined to ensure you focus more on the world around than your phone.</p>
+        <h1>React Snake</h1>
+        <p>Recently, my friend was asked to create the classic arcade game "Snake" in React for a technical interview. The easier way to approach this would be to leverage HTML5's canvas element. Thinking about the game in terms of stateful vs. presentational components was a little bit trickier, but I think I got pretty close!</p>
         <div className="project-link-row">
           <a
             alt="Link to GitHub"
@@ -22,11 +22,12 @@ export const Blip = (props) => {
           </a>
           <a
             alt="Link to deployed app"
-            className="project-link-disabled"
-            href={null}
+            href="https://xchau-react-snake.herokuapp.com"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Icon
-              className="project-link-disabled"
+              className="project-link-enabled"
               style={{ fontSize: '1.1rem' }}
               type="eye-o" />
           </a>
@@ -35,13 +36,13 @@ export const Blip = (props) => {
       <div className="project-divider"></div>
       <div className="project-description-container">
         <div className="project-description-box">
-          <p>Blip serves as a recipe book for travel, where users may share their experiences abroad or follow in another’s footsteps to adopt their experiences. Interactions with the app are streamlined to ensure you focus more on the world around than your phone.</p>
+          <p>Recently, my friend was asked to create the classic arcade game "Snake" in React for a technical interview. The easier way to approach this would be to leverage HTML5's canvas element. Thinking about the game in terms of stateful vs. presentational components was a little bit trickier, but I think I got pretty close!</p>
           <div className="project-img-row">
             <img alt="Blip pic 1" src="https://res.cloudinary.com/xchau/image/upload/v1491350200/t0khhsrrotynxydsyxr2.jpg" />
           </div>
         </div>
         <div className="project-description-box">
-          <p>Blip serves as a recipe book for travel, where users may share their experiences abroad or follow in another’s footsteps to adopt their experiences. Interactions with the app are streamlined to ensure you focus more on the world around than your phone.</p>
+          <p>Recently, my friend was asked to create the classic arcade game "Snake" in React for a technical interview. The easier way to approach this would be to leverage HTML5's canvas element. Thinking about the game in terms of stateful vs. presentational components was a little bit trickier, but I think I got pretty close!</p>
           <div className="project-img-row">
             <img alt="Blip pic 2" src="https://res.cloudinary.com/xchau/image/upload/v1491348232/kkahrfhlaorxxi2jg3my.jpg" />
           </div>

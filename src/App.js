@@ -16,7 +16,7 @@ import { MainContent } from './components/MainContent';
 import { CustomFooter } from './components/CustomFooter';
 import { NoMatch } from './components/projects/NoMatch';
 
-import { projectRoutes } from './components/routes/projectRoutes';
+import { projectRoutes } from './routes/projectRoutes';
 
 const { Content } = Layout;
 

@@ -6,8 +6,12 @@
   width: 76%;
 }
 
-.project-tldr h1 {
+.project-tldr > h1 {
   color: rgba(0, 0, 0, 0.7);
+}
+
+.project-tldr > p, .project-description-box > p {
+  font-size: 0.9rem;
 }
 
 .project-link-row {
@@ -30,7 +34,6 @@
 
 .project-link-disabled {
   color: #999;
-  font-size: 1.1rem;
 }
 
 .project-link-disabled:hover {
@@ -53,8 +56,14 @@
 }
 
 .project-divider {
-  border-bottom: 1px solid #d2d2d2;
+  border-bottom: 1px solid #e2e2e2;
   margin-top: 5px;
   margin-bottom: 35px;
   width: 60%;
+}
+
+.project-img-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }

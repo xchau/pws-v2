@@ -3,16 +3,16 @@ import '../../styles/Project.css';
 
 import Icon from 'antd/lib/icon';
 
-export const Blip = (props) => {
+export const Geofindr = (props) => {
   return (
     <div className="content-box">
       <section className="project-tldr project-section">
-        <h1>Blip</h1>
-        <p>Blip serves as a recipe book for travel, where users may share their experiences abroad or follow in another’s footsteps to adopt their experiences. Interactions with the app are streamlined to ensure you focus more on the world around than your phone.</p>
+        <h1>Geofindr</h1>
+        <p>For my first project with React.js, I thought I'd make a Geoguessr clone. The nature of the game challenged me to leverage React's usage of JSX components and uni-directional data flow. How geographically-savvy are you?</p>
         <div className="project-link-row">
           <a
             alt="Link to GitHub"
-            href="https://github.com/xchau/blip"
+            href="https://github.com/xchau/react-geofindr"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -22,11 +22,12 @@ export const Blip = (props) => {
           </a>
           <a
             alt="Link to deployed app"
-            className="project-link-disabled"
-            href={null}
+            href="https://react-geofindr.herokuapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Icon
-              className="project-link-disabled"
+              className="project-link-enabled"
               style={{ fontSize: '1.1rem' }}
               type="eye-o" />
           </a>
@@ -35,13 +36,13 @@ export const Blip = (props) => {
       <div className="project-divider"></div>
       <div className="project-description-container">
         <div className="project-description-box">
-          <p>Blip serves as a recipe book for travel, where users may share their experiences abroad or follow in another’s footsteps to adopt their experiences. Interactions with the app are streamlined to ensure you focus more on the world around than your phone.</p>
+          <p>For my first project with React.js, I thought I'd make a Geoguessr clone. The nature of the game challenged me to leverage React's usage of JSX components and uni-directional data flow. How geographically-savvy are you?</p>
           <div className="project-img-row">
             <img alt="Blip pic 1" src="https://res.cloudinary.com/xchau/image/upload/v1491350200/t0khhsrrotynxydsyxr2.jpg" />
           </div>
         </div>
         <div className="project-description-box">
-          <p>Blip serves as a recipe book for travel, where users may share their experiences abroad or follow in another’s footsteps to adopt their experiences. Interactions with the app are streamlined to ensure you focus more on the world around than your phone.</p>
+          <p>For my first project with React.js, I thought I'd make a Geoguessr clone. The nature of the game challenged me to leverage React's usage of JSX components and uni-directional data flow. How geographically-savvy are you?</p>
           <div className="project-img-row">
             <img alt="Blip pic 2" src="https://res.cloudinary.com/xchau/image/upload/v1491348232/kkahrfhlaorxxi2jg3my.jpg" />
           </div>

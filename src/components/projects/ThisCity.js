@@ -3,16 +3,16 @@ import '../../styles/Project.css';
 
 import Icon from 'antd/lib/icon';
 
-export const Blip = (props) => {
+export const ThisCity = (props) => {
   return (
     <div className="content-box">
       <section className="project-tldr project-section">
-        <h1>Blip</h1>
-        <p>Blip serves as a recipe book for travel, where users may share their experiences abroad or follow in another’s footsteps to adopt their experiences. Interactions with the app are streamlined to ensure you focus more on the world around than your phone.</p>
+        <h1>this.city</h1>
+        <p>Remember that giant pothole just around the corner that you always have to swerve to avoid? Everyone gripes about it, but the city doesn't seem to know. With this.city, community members can pin areas of caution or interest to a shared map and draw attention to the issues that affect our daily lives.</p>
         <div className="project-link-row">
           <a
             alt="Link to GitHub"
-            href="https://github.com/xchau/blip"
+            href="https://github.com/xchau/this-city"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -35,13 +35,13 @@ export const Blip = (props) => {
       <div className="project-divider"></div>
       <div className="project-description-container">
         <div className="project-description-box">
-          <p>Blip serves as a recipe book for travel, where users may share their experiences abroad or follow in another’s footsteps to adopt their experiences. Interactions with the app are streamlined to ensure you focus more on the world around than your phone.</p>
+          <p>Remember that giant pothole just around the corner that you always have to swerve to avoid? Everyone gripes about it, but the city doesn't seem to know. With this.city, community members can pin areas of caution or interest to a shared map and draw attention to the issues that affect our daily lives.</p>
           <div className="project-img-row">
             <img alt="Blip pic 1" src="https://res.cloudinary.com/xchau/image/upload/v1491350200/t0khhsrrotynxydsyxr2.jpg" />
           </div>
         </div>
         <div className="project-description-box">
-          <p>Blip serves as a recipe book for travel, where users may share their experiences abroad or follow in another’s footsteps to adopt their experiences. Interactions with the app are streamlined to ensure you focus more on the world around than your phone.</p>
+          <p>Remember that giant pothole just around the corner that you always have to swerve to avoid? Everyone gripes about it, but the city doesn't seem to know. With this.city, community members can pin areas of caution or interest to a shared map and draw attention to the issues that affect our daily lives.</p>
           <div className="project-img-row">
             <img alt="Blip pic 2" src="https://res.cloudinary.com/xchau/image/upload/v1491348232/kkahrfhlaorxxi2jg3my.jpg" />
           </div>
