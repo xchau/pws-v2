@@ -7,7 +7,7 @@ import Layout from 'antd/lib/layout';
 import Menu from 'antd/lib/menu';
 import Icon from 'antd/lib/icon';
 
-import { submenuRoutes } from './routes/submenuRoutes';
+import { submenuRoutes } from '../routes/submenuRoutes';
 
 const { Sider } = Layout;
 const SubMenu = Menu.SubMenu;
