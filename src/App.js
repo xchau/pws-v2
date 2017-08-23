@@ -61,7 +61,25 @@ class App extends Component {
       <Router>
         <div className="app-container">
           <Layout>
-            <SideMenu scrollTo={this.scrollTo} />
+            <Switch>
+              <Route
+                exact path="/"
+                component={(props) => (
+                  <SideMenu
+                    scrollTo={this.scrollTo}
+                    shouldLink={false}
+                  />
+                )}
+              />
+              <Route
+                path="*"
+                component={(props) => (
+                  <SideMenu
+                    shouldLink={true}
+                  />
+                )}
+              />
+            </Switch>
             <Layout className="app-content-layout">
               <Switch>
                 <Route
@@ -94,7 +112,6 @@ class App extends Component {
                       />
                     )}
                   />
-
                   {
                     routes.map((route, idx) => <Route
                       key={idx}
@@ -106,7 +123,6 @@ class App extends Component {
                       )}
                     />)
                   }
-
                   <Route
                     path="*"
                     component={(props) => (

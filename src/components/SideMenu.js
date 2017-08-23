@@ -1,11 +1,13 @@
 import React from 'react';
 import '../styles/SideMenu.css';
 
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import Layout from 'antd/lib/layout';
 import Menu from 'antd/lib/menu';
 import Icon from 'antd/lib/icon';
+
+import { submenuRoutes } from './routes/submenuRoutes';
 
 const { Sider } = Layout;
 const SubMenu = Menu.SubMenu;
@@ -30,50 +32,36 @@ export const SideMenu = (props) => {
           key="submenu-1"
           title={projects}
         >
-          <MenuItem key="1">
-            <div onClick={() => props.scrollTo('react_snake')}>
-              React Snake
-            </div>
-          </MenuItem>
-          <MenuItem key="2">
-            <div onClick={() => props.scrollTo('blip')}>
-              Blip
-            </div>
-          </MenuItem>
-          <MenuItem key="3">
-            <div onClick={() => props.scrollTo('this.city')}>
-              this.city
-            </div>
-          </MenuItem>
-          <MenuItem key="4">
-            <div onClick={() => props.scrollTo('geofindr')}>
-              Geofindr
-            </div>
-          </MenuItem>
-          <MenuItem key="5">
-            <div onClick={() => props.scrollTo('lendit')}>
-              LENDit
-            </div>
-          </MenuItem>
-          <MenuItem key="6">
-            <div onClick={() => props.scrollTo('miser')}>
-              Miser
-            </div>
-          </MenuItem>
+          {
+            submenuRoutes.map((route, idx) => <MenuItem key={idx}>
+              {
+                props.shouldLink ? <Link to={route.path}>
+                  { route.title }
+                </Link> :
+                <div onClick={() => props.scrollTo(route.path.slice(1))}>
+                  { route.title }
+                </div>
+              }
+            </MenuItem>)
+          }
         </SubMenu>
         <MenuItem key="7">
-          <Icon type="smile-o" />
-          <span className="nav-text">Thoughts</span>
+          <Link to='/thoughts'>
+            <Icon type="smile-o" />
+            <span className="nav-text">Thoughts</span>
+          </Link>
         </MenuItem>
         <MenuItem key="8">
-          <Icon type="user" />
-          <span className="nav-text">About</span>
+          <Link to='/about'>
+            <Icon type="user" />
+            <span className="nav-text">About</span>
+          </Link>
         </MenuItem>
         <MenuItem key="9">
-          <div onClick={() => props.scrollTo('miser')}>
+          <Link to='/contact'>
             <Icon type="phone" />
             <span className="nav-text">Contact</span>
-          </div>
+          </Link>
         </MenuItem>
       </Menu>
     </Sider>
