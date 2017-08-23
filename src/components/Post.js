@@ -15,9 +15,6 @@ export const Post = (props) => {
       className="post-container"
       id={props.project.pathName}
     >
-      {/* <div className="post-quick-view">
-        <Icon className="post-view-icon" type="eye-o" />
-      </div> */}
       <div className="post-heading-container">
         <Link
           className="post-header"

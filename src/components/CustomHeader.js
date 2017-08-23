@@ -16,7 +16,9 @@ export const CustomHeader = (props) => {
         <Link to="/">
           <span id="top" className="header-name">
             Minh Nhat Chau
-            <span className="header-title">Web Developer</span>
+            <span className="header-title">
+              Web Developer
+            </span>
           </span>
         </Link>
         {
