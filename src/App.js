@@ -16,7 +16,7 @@ import { MainContent } from './components/MainContent';
 import { CustomFooter } from './components/CustomFooter';
 import { NoMatch } from './components/projects/NoMatch';
 
-import {routes} from './components/routes/routes';
+import { projectRoutes } from './components/routes/projectRoutes';
 
 const { Content } = Layout;
 
@@ -113,7 +113,7 @@ class App extends Component {
                     )}
                   />
                   {
-                    routes.map((route, idx) => <Route
+                    projectRoutes.map((route, idx) => <Route
                       key={idx}
                       path={route.path}
                       component={(props) => (
