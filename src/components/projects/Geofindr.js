@@ -38,13 +38,23 @@ export const Geofindr = (props) => {
         <div className="project-description-box">
           <p>For my first project with React.js, I thought I'd make a Geoguessr clone. The nature of the game challenged me to leverage React's usage of JSX components and uni-directional data flow. How geographically-savvy are you?</p>
           <div className="project-img-row">
-            <img alt="Blip pic 1" src="https://res.cloudinary.com/xchau/image/upload/v1491350200/t0khhsrrotynxydsyxr2.jpg" />
+            <div className="project-img-box">
+              <img
+                alt="Blip pic 2"
+                className="project-img-one"
+                src="https://res.cloudinary.com/xchau/image/upload/v1491348232/kkahrfhlaorxxi2jg3my.jpg" />
+            </div>
           </div>
         </div>
         <div className="project-description-box">
           <p>For my first project with React.js, I thought I'd make a Geoguessr clone. The nature of the game challenged me to leverage React's usage of JSX components and uni-directional data flow. How geographically-savvy are you?</p>
           <div className="project-img-row">
-            <img alt="Blip pic 2" src="https://res.cloudinary.com/xchau/image/upload/v1491348232/kkahrfhlaorxxi2jg3my.jpg" />
+            <div className="project-img-box">
+              <img
+                alt="Blip pic 2"
+                className="project-img-one"
+                src="https://res.cloudinary.com/xchau/image/upload/v1491348232/kkahrfhlaorxxi2jg3my.jpg" />
+            </div>
           </div>
         </div>
       </div>

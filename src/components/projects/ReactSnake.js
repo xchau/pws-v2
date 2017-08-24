@@ -38,13 +38,27 @@ export const ReactSnake = (props) => {
         <div className="project-description-box">
           <p>Recently, my friend was asked to create the classic arcade game "Snake" in React for a technical interview. The easier way to approach this would be to leverage HTML5's canvas element. Thinking about the game in terms of stateful vs. presentational components was a little bit trickier, but I think I got pretty close!</p>
           <div className="project-img-row">
-            <img alt="Blip pic 1" src="https://res.cloudinary.com/xchau/image/upload/v1491350200/t0khhsrrotynxydsyxr2.jpg" />
+            <div className="project-img-box">
+              <img
+                alt="Blip pic 1"
+                className="project-img-two"
+                src="https://res.cloudinary.com/xchau/image/upload/v1491350200/t0khhsrrotynxydsyxr2.jpg" />
+              <img
+                alt="Blip pic 1"
+                className="project-img-two"
+                src="https://res.cloudinary.com/xchau/image/upload/v1491350200/t0khhsrrotynxydsyxr2.jpg" />
+            </div>
           </div>
         </div>
         <div className="project-description-box">
           <p>Recently, my friend was asked to create the classic arcade game "Snake" in React for a technical interview. The easier way to approach this would be to leverage HTML5's canvas element. Thinking about the game in terms of stateful vs. presentational components was a little bit trickier, but I think I got pretty close!</p>
           <div className="project-img-row">
-            <img alt="Blip pic 2" src="https://res.cloudinary.com/xchau/image/upload/v1491348232/kkahrfhlaorxxi2jg3my.jpg" />
+            <div className="project-img-box">
+              <img
+                alt="Blip pic 2"
+                className="project-img-one"
+                src="https://res.cloudinary.com/xchau/image/upload/v1491348232/kkahrfhlaorxxi2jg3my.jpg" />
+            </div>
           </div>
         </div>
       </div>

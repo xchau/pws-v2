@@ -67,3 +67,18 @@
   justify-content: center;
   margin-top: 20px;
 }
+
+.project-img-box {
+  width: 100%;
+}
+
+.project-img-one {
+  height: auto;
+  width: 100%;
+}
+
+.project-img-two {
+  height: auto;
+  margin: 0 1%;
+  width: 48%;
+}

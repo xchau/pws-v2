@@ -37,13 +37,23 @@ export const ThisCity = (props) => {
         <div className="project-description-box">
           <p>Remember that giant pothole just around the corner that you always have to swerve to avoid? Everyone gripes about it, but the city doesn't seem to know. With this.city, community members can pin areas of caution or interest to a shared map and draw attention to the issues that affect our daily lives.</p>
           <div className="project-img-row">
-            <img alt="Blip pic 1" src="https://res.cloudinary.com/xchau/image/upload/v1491350200/t0khhsrrotynxydsyxr2.jpg" />
+            <div className="project-img-box">
+              <img
+                alt="Blip pic 2"
+                className="project-img-one"
+                src="https://res.cloudinary.com/xchau/image/upload/v1491348232/kkahrfhlaorxxi2jg3my.jpg" />
+            </div>
           </div>
         </div>
         <div className="project-description-box">
           <p>Remember that giant pothole just around the corner that you always have to swerve to avoid? Everyone gripes about it, but the city doesn't seem to know. With this.city, community members can pin areas of caution or interest to a shared map and draw attention to the issues that affect our daily lives.</p>
           <div className="project-img-row">
-            <img alt="Blip pic 2" src="https://res.cloudinary.com/xchau/image/upload/v1491348232/kkahrfhlaorxxi2jg3my.jpg" />
+            <div className="project-img-box">
+              <img
+                alt="Blip pic 2"
+                className="project-img-one"
+                src="https://res.cloudinary.com/xchau/image/upload/v1491348232/kkahrfhlaorxxi2jg3my.jpg" />
+            </div>
           </div>
         </div>
       </div>

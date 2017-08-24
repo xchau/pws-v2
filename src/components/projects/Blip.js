@@ -37,13 +37,23 @@ export const Blip = (props) => {
         <div className="project-description-box">
           <p>Blip serves as a recipe book for travel, where users may share their experiences abroad or follow in another’s footsteps to adopt their experiences. Interactions with the app are streamlined to ensure you focus more on the world around than your phone.</p>
           <div className="project-img-row">
-            <img alt="Blip pic 1" src="https://res.cloudinary.com/xchau/image/upload/v1491350200/t0khhsrrotynxydsyxr2.jpg" />
+            <div className="project-img-box">
+              <img
+                alt="Blip pic 2"
+                className="project-img-one"
+                src="https://res.cloudinary.com/xchau/image/upload/v1491348232/kkahrfhlaorxxi2jg3my.jpg" />
+            </div>
           </div>
         </div>
         <div className="project-description-box">
           <p>Blip serves as a recipe book for travel, where users may share their experiences abroad or follow in another’s footsteps to adopt their experiences. Interactions with the app are streamlined to ensure you focus more on the world around than your phone.</p>
           <div className="project-img-row">
-            <img alt="Blip pic 2" src="https://res.cloudinary.com/xchau/image/upload/v1491348232/kkahrfhlaorxxi2jg3my.jpg" />
+            <div className="project-img-box">
+              <img
+                alt="Blip pic 2"
+                className="project-img-one"
+                src="https://res.cloudinary.com/xchau/image/upload/v1491348232/kkahrfhlaorxxi2jg3my.jpg" />
+            </div>
           </div>
         </div>
       </div>

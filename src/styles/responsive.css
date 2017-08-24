@@ -1,0 +1,41 @@
+@media (max-width: 1000px) {
+  .app-content-layout {
+    margin-left: 180px !important;
+  }
+  .sidemenu-sider {
+    width: 180px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .project-link-row {
+    width: 28% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-content-layout {
+    margin-left: 0 !important;
+  }
+  .sidemenu-sider {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .header-search-bar {
+    width: 38% !important;
+  }
+  .app-content-layout {
+    min-width: 414px !important;
+  }
+  .footer-contact-box {
+    width: 40% !important;
+  }
+  .header-name {
+    font-size: 1.6rem !important;
+  }
+  .header-title {
+    font-size: 0.8rem !important;
+  }
+}
