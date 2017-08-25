@@ -14,6 +14,13 @@
   font-size: 0.9rem;
 }
 
+.project-description-box p > a {
+  color: #f5617c;
+  font-size: 0.9rem;
+  margin: 0 3px;
+  text-decoration: none;
+}
+
 .project-link-row {
   border: 1px solid #e2e2e2;
   border-radius: 4px;
@@ -65,10 +72,12 @@
 .project-img-row {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 .project-img-box {
+  align-items: flex-start;
+  display: flex;
   width: 100%;
 }
 
