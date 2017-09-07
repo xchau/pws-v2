@@ -15,6 +15,7 @@ import { CustomHeader } from './components/CustomHeader';
 import { SideMenu } from './components/SideMenu';
 import { MainContent } from './components/MainContent';
 import { CustomFooter } from './components/CustomFooter';
+import { About } from './components/About';
 import { NoMatch } from './components/projects/NoMatch';
 
 import { projectRoutes } from './routes/projectRoutes';
@@ -30,6 +31,7 @@ class App extends Component {
     };
 
     this.scrollTo = this.scrollTo.bind(this);
+    // this.download = this.download.bind(this);
   }
 
   scrollTo(id) {
@@ -39,6 +41,17 @@ class App extends Component {
       smoothScroll(location);
     }
   }
+
+  // download() {
+  //   console.log('clicked');
+  //   axios.get('http://localhost:8000/resume')
+  //     .then(res => {
+  //       console.log(res);
+  //     })
+  //     .catch(err => {
+  //       console.error(err);
+  //     })
+  // }
 
   componentDidMount() {
     axios({
@@ -124,6 +137,15 @@ class App extends Component {
                       )}
                     />)
                   }
+                  <Route
+                    path="/about"
+                    component={(props) => (
+                      <About {...props}
+                        showSearch={this.state.showSearch}
+                        toggleSearchBar={this.toggleSearchBar}
+                      />
+                    )}
+                  />
                   <Route
                     path="*"
                     component={(props) => (

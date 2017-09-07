@@ -1,0 +1,43 @@
+.about-hero {
+  align-items: center;
+  background: url(https://res.cloudinary.com/xchau/image/upload/v1504821975/desktop_qkovef.jpg);
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 0 10%;
+  width: 100%;
+  min-width: 90%;
+}
+
+.about-hero > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.about-profile-pic {
+  background: url(https://res.cloudinary.com/xchau/image/upload/v1504826841/415738_10101474324907968_1221380069_o_j4schg.jpg);
+  background-size: cover;
+  border: 1px solid #f2f4ad;
+  border-radius: 50%;
+  height: 120px;
+  margin-bottom: 24px;
+  width: 120px;
+}
+
+.about-dl-resume {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #f2f4ad;
+  border-radius: 4px;
+  display: flex;
+  font-size: 0.9rem;
+  height: 33px;
+  justify-content: center;
+  margin-top: 25px;
+  padding: 3px 8px;
+  width: 80px;
+}
