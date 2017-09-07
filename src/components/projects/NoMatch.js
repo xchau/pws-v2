@@ -3,7 +3,7 @@ import React from 'react';
 export const NoMatch = (props) => {
   return (
     <div className="content-box">
-      404 Not Found
+      Sorry, I haven't gotten around to writing this post yet!
     </div>
   );
 };

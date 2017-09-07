@@ -77,6 +77,16 @@ export const ThisCity = (props) => {
           </div>
         </div>
       </div>
+      <div
+        className="content-top-box"
+        onClick={() => props.scrollTo('top')}
+        onMouseEnter={props.toggleScrollHover}
+      >
+        <Icon
+          className="content-top-icon"
+          type="to-top"
+        />
+      </div>
     </div>
   );
 };

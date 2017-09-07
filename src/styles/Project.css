@@ -8,6 +8,7 @@
 
 .project-tldr > h1 {
   color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 8px;
 }
 
 .project-tldr > p, .project-description-box > p {

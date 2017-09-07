@@ -119,7 +119,7 @@ class App extends Component {
                       path={route.path}
                       component={(props) => (
                         <route.comp {...props}
-
+                          scrollTo={this.scrollTo}
                         />
                       )}
                     />)

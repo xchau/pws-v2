@@ -16,6 +16,11 @@
   font-size: 1rem;
 }
 
+html {
+  border-top: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+
 html, body, #root {
   height: 100%;
 }
