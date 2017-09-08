@@ -57,12 +57,12 @@ export const SideMenu = (props) => {
             <span className="nav-text">About</span>
           </Link>
         </MenuItem>
-        <MenuItem key="9">
+        {/* <MenuItem key="9">
           <Link to='/contact'>
             <Icon type="phone" />
             <span className="nav-text">Contact</span>
           </Link>
-        </MenuItem>
+        </MenuItem> */}
       </Menu>
     </Sider>
   );

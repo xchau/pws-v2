@@ -16,6 +16,10 @@
   border: 0;
 }
 
+.ant-menu-item {
+  margin: 8px 0;
+}
+
 .ant-menu-item .anticon, .ant-menu-submenu-title .anticon {
   margin-right: 12px;
 }

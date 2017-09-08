@@ -1,7 +1,10 @@
 .about-hero {
   align-items: center;
   background: url(https://res.cloudinary.com/xchau/image/upload/v1504821975/desktop_qkovef.jpg);
-  background-size: cover;
+  background-size: contain;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
   color: #fff;
   display: flex;
   flex-direction: column;
