@@ -9,8 +9,6 @@ export const Project = (props) => {
   const demoClass = props.data.demoLink ?
     'project-link-enabled' : 'project-link-disabled';
 
-  console.log(props);
-
   return (
     <div className="content-box">
       <section className="project-tldr project-section">

@@ -71,11 +71,10 @@ class App extends Component {
   componentDidMount() {
     axios({
       method: 'get',
-      // url: 'https://xchau-pws-server.herokuapp.com/api/projects'
-      url: 'http://localhost:8000/api/projects'
+      url: 'https://xchau-pws-server.herokuapp.com/api/projects'
+      // url: 'http://localhost:8000/api/projects'
     })
     .then((res) => {
-      console.log(res.data);
       this.setState({
         allProjects: res.data,
         projects: res.data
