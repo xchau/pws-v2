@@ -63,10 +63,16 @@
   width: 76%;
 }
 
+.project-hero-box {
+  height: 400px;
+  margin-bottom: 28px; 
+  width: 100%;
+}
+
 .project-divider {
   border-bottom: 1px solid #e2e2e2;
   margin-top: 5px;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   width: 60%;
 }
 
