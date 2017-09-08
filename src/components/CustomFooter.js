@@ -15,7 +15,7 @@ const logoStyle = {
 export const CustomFooter = (props) => {
   return (
     <Footer className="footer-container">
-      <div className="footer-info-box">
+      <div id="contact-info" className="footer-info-box">
         {/* Minh Chau */}
       </div>
       <div className="footer-contact-box">

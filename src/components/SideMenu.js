@@ -57,12 +57,12 @@ export const SideMenu = (props) => {
             <span className="nav-text">About</span>
           </Link>
         </MenuItem>
-        {/* <MenuItem key="9">
-          <Link to='/contact'>
+        <MenuItem key="9">
+          <div onClick={() => props.scrollTo('contact-info')}>
             <Icon type="phone" />
             <span className="nav-text">Contact</span>
-          </Link>
-        </MenuItem> */}
+          </div>
+        </MenuItem>
       </Menu>
     </Sider>
   );

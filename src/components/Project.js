@@ -54,11 +54,11 @@ export const Project = (props) => {
       <div className="project-description-container">
         <div className="project-hero-box">
           <img
+            alt="Project hero"
             className="project-hero-img"
             src={props.data.heroLink}
           />
         </div>
-
       </div>
       <div className="project-divider"></div>
       <div

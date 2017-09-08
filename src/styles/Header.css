@@ -45,3 +45,20 @@
   margin: 20px 0 5px 0;
   width: 24%;
 }
+
+.header-results-box {
+  align-items: center;
+  display: flex;
+  font-size: 0.8rem;
+  max-height: 30px;
+}
+
+.header-close-span:hover {
+  cursor: pointer;
+}
+
+.header-close-icon {
+  color: #f5617c;
+  font-size: 0.75rem;
+  margin-left: 12px;
+}

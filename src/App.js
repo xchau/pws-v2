@@ -16,9 +16,10 @@ import { SideMenu } from './components/SideMenu';
 import { MainContent } from './components/MainContent';
 import { CustomFooter } from './components/CustomFooter';
 import { About } from './components/About';
-// import { Contact } from './components/Contact';
 import { Project } from './components/Project';
 import { NoMatch } from './components/NoMatch';
+
+import { filterArr } from './util/helpers';
 
 const { Content } = Layout;
 
@@ -27,10 +28,36 @@ class App extends Component {
     super(props);
 
     this.state = {
+      keywords: '',
+      allProjects: [],
       projects: [],
+      searched: false
     };
 
+    this.clearSearch = this.clearSearch.bind(this);
+    this.filterProjects = this.filterProjects.bind(this);
     this.scrollTo = this.scrollTo.bind(this);
+  }
+
+  clearSearch() {
+    this.setState({
+      projects: this.state.allProjects,
+      searched: false
+    });
+  }
+
+  filterProjects(keywords, projects) {
+    const filtered = filterArr(keywords, projects);
+
+    this.setState({
+      projects: this.state.allProjects
+    }, () => {
+      this.setState({
+        keywords,
+        projects: filtered,
+        searched: true
+      });
+    });
   }
 
   scrollTo(id) {
@@ -50,6 +77,7 @@ class App extends Component {
     .then((res) => {
       console.log(res.data);
       this.setState({
+        allProjects: res.data,
         projects: res.data
       });
     })
@@ -77,6 +105,7 @@ class App extends Component {
                 path="*"
                 component={(props) => (
                   <SideMenu
+                    scrollTo={this.scrollTo}
                     shouldLink={true}
                   />
                 )}
@@ -88,6 +117,11 @@ class App extends Component {
                   exact path="/"
                   component={(props) => (
                     <CustomHeader
+                      clearSearch={this.clearSearch}
+                      filterProjects={this.filterProjects}
+                      keywords={this.state.keywords}
+                      allProjects={this.state.allProjects}
+                      searched={this.state.searched}
                       showSearch={true}
                     />
                   )}
@@ -135,15 +169,6 @@ class App extends Component {
                       />
                     )}
                   />
-                  {/* <Route
-                    path="/contact"
-                    component={(props) => (
-                      <Contact {...props}
-                        showSearch={this.state.showSearch}
-                        toggleSearchBar={this.toggleSearchBar}
-                      />
-                    )}
-                  /> */}
                   <Route
                     path="*"
                     component={(props) => (

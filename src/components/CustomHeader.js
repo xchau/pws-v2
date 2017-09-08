@@ -3,8 +3,9 @@ import '../styles/Header.css';
 
 import { Link } from 'react-router-dom';
 
-import Layout from 'antd/lib/layout';
 import Input from 'antd/lib/input';
+import Icon from 'antd/lib/icon';
+import Layout from 'antd/lib/layout';
 
 const { Header } = Layout;
 const Search = Input.Search;
@@ -24,9 +25,21 @@ export const CustomHeader = (props) => {
         {
           props.showSearch ? <Search
             className="header-search-bar"
-            onSearch={value => console.log(value)}
-            placeholder="input search text"
+            onSearch={keywords => props.filterProjects(keywords, props.allProjects)}
+            placeholder="search by keyword"
           /> : null
+        }
+        {
+          props.searched ? <div className="header-results-box">
+            {props.keywords}
+            <span className="header-close-span">
+              <Icon
+                className="header-close-icon"
+                onClick={props.clearSearch}
+                type="close-square-o"
+              />
+            </span>
+          </div> : null
         }
       </div>
     </Header>
