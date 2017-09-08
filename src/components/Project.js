@@ -6,12 +6,9 @@ import Icon from 'antd/lib/icon';
 export const Project = (props) => {
   const deployClass = props.data.deployedAt ?
     'project-link-enabled' : 'project-link-disabled';
-  const heroImgStyle = {
-    background: 'url(https://res.cloudinary.com/xchau/image/upload/v1504842340/miser-hero_f8chq5.png)',
-    backgroundSize: 'cover',
-    height: '100%',
-    width: '100%'
-  };
+  const demoClass = props.data.demoLink ?
+    'project-link-enabled' : 'project-link-disabled';
+
   console.log(props);
 
   return (
@@ -32,7 +29,7 @@ export const Project = (props) => {
           </a>
           <a
             alt="Link to deployed app"
-            href={props.data.deployedAt}
+            href={props.data.deployedAt ? props.data.deployedAt : null}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -41,15 +38,29 @@ export const Project = (props) => {
               style={{ fontSize: '1.1rem' }}
               type="eye-o" />
           </a>
+          <a
+            alt="Link to demo video"
+            href={props.data.demoLink ? props.data.demoLink : null}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon
+              className={demoClass}
+              style={{ fontSize: '1.1rem' }}
+              type="play-circle-o" />
+          </a>
         </div>
       </section>
-      <div className="project-divider"></div>
       <div className="project-description-container">
         <div className="project-hero-box">
-          <div style={heroImgStyle}></div>
+          <img
+            className="project-hero-img"
+            src={props.data.heroLink}
+          />
         </div>
 
       </div>
+      <div className="project-divider"></div>
       <div
         className="content-top-box"
         onClick={() => props.scrollTo('top')}
