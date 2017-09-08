@@ -17,9 +17,8 @@ import { MainContent } from './components/MainContent';
 import { CustomFooter } from './components/CustomFooter';
 import { About } from './components/About';
 // import { Contact } from './components/Contact';
-import { NoMatch } from './components/projects/NoMatch';
-
-import { projectRoutes } from './routes/projectRoutes';
+import { Project } from './components/Project';
+import { NoMatch } from './components/NoMatch';
 
 const { Content } = Layout;
 
@@ -116,12 +115,13 @@ class App extends Component {
                     )}
                   />
                   {
-                    projectRoutes.map((route, idx) => <Route
+                    this.state.projects.map((project, idx) => <Route
                       key={idx}
-                      path={route.path}
+                      path={`/${project.pathName}`}
                       component={(props) => (
-                        <route.comp {...props}
+                        <Project {...props}
                           scrollTo={this.scrollTo}
+                          data={project}
                         />
                       )}
                     />)
