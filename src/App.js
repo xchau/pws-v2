@@ -71,8 +71,12 @@ class App extends Component {
   componentDidMount() {
     axios({
       method: 'get',
-      url: 'https://xchau-pws-server.herokuapp.com/api/projects'
+      url: 'https://xchau-pws-server.herokuapp.com/api/projects',
       // url: 'http://localhost:8000/api/projects'
+      headers: {
+    		'Accept': 'application/json',
+    		'Content-Type': 'application/json',
+    	}
     })
     .then((res) => {
       this.setState({
