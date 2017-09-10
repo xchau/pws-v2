@@ -10,14 +10,19 @@ export const MainContent = (props) => {
     <div className="content-box">
       <div className="content-list">
         {
-          props.projects.length ? props.projects.map((project, idx) =>
-          <Post
-            key={idx}
-            project={project}
-          >
-            {project.blurb}
-          </Post>) :
-          <div>No results</div>
+          props.projects ?
+            props.projects.length ? props.projects.map((project, idx) =>
+            <Post
+              key={idx}
+              project={project}
+            >
+              {project.blurb}
+            </Post>) : <div>No results</div>
+            :
+            <Icon
+              className="content-load-icon"
+              type="loading"
+            />
         }
       </div>
       <div

@@ -24,6 +24,8 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  min-height: 200px;
   margin-bottom: 20px;
 }
 
@@ -37,6 +39,10 @@
 
 .content-top-box:hover {
   cursor: pointer;
+}
+
+.content-load-icon {
+  font-size: 2.5rem;
 }
 
 .content-top-icon {

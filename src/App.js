@@ -29,8 +29,8 @@ class App extends Component {
 
     this.state = {
       keywords: '',
-      allProjects: [],
-      projects: [],
+      allProjects: null,
+      projects: null,
       searched: false
     };
 
@@ -151,7 +151,7 @@ class App extends Component {
                     )}
                   />
                   {
-                    this.state.projects.map((project, idx) => <Route
+                    this.state.projects ? this.state.projects.map((project, idx) => <Route
                       key={idx}
                       path={`/${project.pathName}`}
                       component={(props) => (
@@ -160,7 +160,7 @@ class App extends Component {
                           data={project}
                         />
                       )}
-                    />)
+                    />) : null
                   }
                   <Route
                     path="/about"
